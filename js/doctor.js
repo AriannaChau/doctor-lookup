@@ -5,8 +5,8 @@ function doctorInfo() {
 
 doctorInfo.prototype.docInfo = function(condition) {
   var doctors = [];
-  $('#output').text("");
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
+  $('#result-li').text("");
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ condition+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
   .then(function(results) {
     results.data.forEach(function(doctor) {
       doctors.push({
@@ -32,7 +32,15 @@ doctorInfo.prototype.docInfo = function(condition) {
         doctor.bio = "No bio available.";
       }
     });
-    return doctors;
+    if (doctors.length === 0) {
+      $('#result-li').append("<h4>No results. Try getting a little more specific!");
+    } else {
+      doctors.forEach(function(doc) {
+        $('#result-li').append(
+          "<li>" + doc.firstName + " " + doc.lastName + ", " + doc.title + "<p>" + doc.bio + "</p></li>"
+        );
+      });
+    }
   })
   .fail(function(error){
   });
