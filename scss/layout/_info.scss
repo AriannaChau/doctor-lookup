@@ -1,8 +1,9 @@
-
+body {
+  overflow: hidden;
+}
 .container {
   display: flex;
   justify-content: center;
-  overflow: hidden;
   .input-area {
     display: flex;
     justify-content: center;
@@ -26,11 +27,16 @@
     button {
       height: 30px;
       align-self: center;
+      font-size: 16px;
+      background-color: #973232;
+      border: none;
+      color: white;
+      border-radius: 5px;
     }
   }
   .output {
     width: 65%;
-    max-height: 71vh;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
