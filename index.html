@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link rel="stylesheet" href="build/css/styles.css">
@@ -11,16 +11,18 @@
     <div class="header">
       <h1>Doctor, Who?</h1>
     </div>
-    <div class="input-area">
-      <div class="search">
-        <input type="text" id="search-symptoms" name="" value="">
-        <button type="button" id="find" name="button">Find doctors</button>
+    <div class="container">
+      <div class="input-area">
+        <div class="search">
+          <input type="text" id="search-symptoms" name="" value="">
+          <button type="button" id="find" name="button">Find doctors</button>
+        </div>
+        <button type="button" id="clear" name="button">Clear search</button>
       </div>
-      <button type="button" id="clear" name="button">Clear search</button>
-    </div>
-    <div class="output">
-      <ul id="result-li">
-      </ul>
+      <div class="output">
+        <ul id="result-li">
+        </ul>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,46 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  .input-area {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-basis: 35%;
+    max-height: 300px;
+    button {
+      height: 50px;
+    }
+  }
+  .output {
+    width: 65%;
+    max-height: 71vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    ul {
+      list-style-type: none;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 0;
+      overflow: scroll;
+
+    }
+    li {
+      background-color: lighten(grey, 45%);
+      box-shadow: 3px 3px 3px grey;
+      margin: 5px;
+      margin-bottom: 10px;
+      min-height: 300px;
+      max-height: 300px;
+      min-width: 300px;
+      overflow: scroll;
+      width: 48%;
+    }
+  }
+}

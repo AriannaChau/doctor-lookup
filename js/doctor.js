@@ -37,7 +37,7 @@ doctorInfo.prototype.docInfo = function(condition) {
     } else {
       doctors.forEach(function(doc) {
         $('#result-li').append(
-          "<li>" + doc.firstName + " " + doc.lastName + ", " + doc.title + "<p>" + doc.bio + "</p></li>"
+          "<li><h3>" + doc.firstName + " " + doc.lastName + ", " + doc.title + "</h3><p>" + doc.bio + "</p></li>"
         );
       });
     }
